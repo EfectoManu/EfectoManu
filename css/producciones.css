@@ -1,0 +1,30 @@
+.productions-page .productions-intro{display:flex;justify-content:space-between;align-items:end;gap:35px;padding-block:72px 56px}
+.productions-intro h1{font:600 clamp(48px,7vw,88px)/.98 "Space Grotesk",sans-serif;letter-spacing:-.075em;max-width:760px;margin:0}
+.productions-intro h1 span{color:var(--blue)}
+.intro-copy{font-size:16px;line-height:1.65;color:var(--muted);max-width:470px;margin:22px 0 0}
+.intro-aside{display:flex;flex-direction:column;gap:9px;min-width:170px;padding:0 0 7px 18px;border-left:1px solid var(--border);font:500 9px "Space Grotesk",sans-serif;letter-spacing:.1em;color:var(--muted)}
+.intro-aside b{font-size:20px;color:var(--text);letter-spacing:-.04em}
+.production-feature{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);gap:34px;align-items:center;padding-bottom:64px}
+.production-poster,.production-card-image{position:relative;display:block;overflow:hidden;background:var(--section);border-radius:var(--radius)}
+.production-poster{aspect-ratio:1.65/1}
+.production-poster img,.production-card-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s}
+.production-poster:hover img,.production-card-image:hover img{transform:scale(1.035)}
+.poster-stamp,.poster-index{position:absolute;left:18px;top:18px;padding:8px 10px;background:var(--yellow);color:#171717;font:600 9px "Space Grotesk",sans-serif;letter-spacing:.1em}
+.poster-index{top:auto;bottom:18px;background:#171717;color:#fff}
+.poster-play,.card-play{position:absolute;right:20px;bottom:20px;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);color:#171717;font-size:17px;box-shadow:0 5px 24px #0002}
+.production-description{padding:12px 0}
+.production-meta{display:flex;justify-content:space-between;gap:12px;font:500 9px "Space Grotesk",sans-serif;letter-spacing:.08em;color:var(--muted)}
+.production-description h2,.production-card-copy h2{font:600 clamp(30px,4vw,46px)/1.05 "Space Grotesk",sans-serif;letter-spacing:-.06em;margin:24px 0 14px}
+.production-description p,.production-card-copy p{font-size:14px;line-height:1.75;color:var(--muted);margin:0 0 25px;max-width:470px}
+.production-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;padding-bottom:65px}
+.production-card{display:grid;grid-template-columns:1fr;overflow:hidden;border:1px solid var(--border);border-radius:var(--radius);background:var(--card)}
+.production-card-image{aspect-ratio:1.65/1;border-radius:0}
+.production-card-copy{padding:22px}
+.production-card-copy h2{font-size:30px;margin:17px 0 10px}
+.production-card-copy p{margin-bottom:18px}
+.productions-note{display:flex;align-items:center;justify-content:space-between;gap:25px;border-top:1px solid var(--border);padding:25px 0 72px}
+.productions-note>span{font:500 9px "Space Grotesk",sans-serif;letter-spacing:.12em;color:var(--blue)}
+.productions-note p{font:500 18px "Space Grotesk",sans-serif;letter-spacing:-.03em;margin:0}
+@media(max-width:800px){.productions-page .productions-intro{padding-block:48px 40px}.production-feature{grid-template-columns:1fr;gap:22px}.production-description{padding:0}.production-description h2{margin-top:17px}.intro-aside{min-width:140px}}
+@media(max-width:620px){.productions-page .productions-intro{display:block}.intro-aside{margin-top:26px;display:grid;grid-template-columns:1fr auto;border-left:0;border-top:1px solid var(--border);padding:14px 0 0}.intro-aside span:last-child{grid-column:1/-1}.production-poster{aspect-ratio:1.25/1}.production-pair{grid-template-columns:1fr;gap:16px;padding-bottom:45px}.productions-note{align-items:flex-start;flex-direction:column;padding-bottom:52px}.productions-note p{font-size:17px}.poster-play{width:46px;height:46px}}
+@media(prefers-reduced-motion:reduce){.production-poster img,.production-card-image img{transition:none}}
