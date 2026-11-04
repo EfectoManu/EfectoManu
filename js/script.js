@@ -33,17 +33,12 @@
       menuButton.setAttribute('aria-label', 'Abrir menú');
     });
   });
-  const sections = [...document.querySelectorAll('main section[id]')];
-  if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        document.querySelectorAll('.nav-link').forEach((link) => {
-          link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
-        });
-      });
-    }, { rootMargin: '-30% 0px -60% 0px' });
-    sections.forEach((section) => observer.observe(section));
-  }
+
+  // Mientras el sitio sea una página única, Inicio permanece como opción activa.
+  // Los enlaces del menú siguen desplazándose a sus respectivas secciones.
+  nav.querySelectorAll('.nav-link').forEach((link) => {
+    link.classList.toggle('active', link.getAttribute('href') === '#inicio');
+  });
+
   year.textContent = new Date().getFullYear();
 })();
