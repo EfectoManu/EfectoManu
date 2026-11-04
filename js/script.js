@@ -37,7 +37,7 @@
   // Mientras el sitio sea una página única, Inicio permanece como opción activa.
   // Los enlaces del menú siguen desplazándose a sus respectivas secciones.
   nav.querySelectorAll('.nav-link').forEach((link) => {
-    link.classList.toggle('active', link.getAttribute('href') === '#inicio');
+    link.classList.toggle('active', link.getAttribute('aria-current') === 'page' || link.getAttribute('href') === '#inicio');
   });
 
   year.textContent = new Date().getFullYear();
