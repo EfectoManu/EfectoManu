@@ -41,4 +41,97 @@
   });
 
   year.textContent = new Date().getFullYear();
+
+  // Formulario de contacto: validación y envío a la función serverless de Vercel.
+  const contactForm = document.querySelector('#contact-form');
+  if (contactForm) {
+    const fileInput = contactForm.querySelector('#contact-archivos');
+    const fileList = contactForm.querySelector('#contact-file-list');
+    const submitButton = contactForm.querySelector('#contact-submit');
+    const statusBox = contactForm.querySelector('#contact-status');
+    const maxFiles = 5;
+    const maxBytes = 3 * 1024 * 1024;
+    const allowed = {
+      '.pdf': 'application/pdf',
+      '.jpg': 'image/jpeg',
+      '.jpeg': 'image/jpeg',
+      '.png': 'image/png',
+      '.webp': 'image/webp'
+    };
+
+    const showContactStatus = (message, type) => {
+      statusBox.textContent = message;
+      statusBox.className = 'contact-status is-visible is-' + type;
+    };
+
+    const validateContactFiles = (files) => {
+      if (files.length > maxFiles) return 'Puedes adjuntar máximo 5 archivos.';
+      let total = 0;
+      for (const file of files) {
+        const dot = file.name.lastIndexOf('.');
+        const ext = dot >= 0 ? file.name.slice(dot).toLowerCase() : '';
+        if (!allowed[ext] || file.type !== allowed[ext]) return 'Formato no permitido: ' + file.name;
+        total += file.size;
+      }
+      if (total > maxBytes) return 'Los archivos superan el límite total de 3 MB.';
+      return '';
+    };
+
+    fileInput.addEventListener('change', () => {
+      const files = Array.from(fileInput.files || []);
+      fileList.replaceChildren();
+      const error = validateContactFiles(files);
+      if (error) {
+        fileInput.value = '';
+        showContactStatus(error, 'error');
+        return;
+      }
+      statusBox.className = 'contact-status';
+      files.forEach((file) => {
+        const item = document.createElement('div');
+        item.className = 'contact-file-item';
+        const name = document.createElement('span');
+        name.textContent = file.name;
+        const size = document.createElement('strong');
+        size.textContent = (file.size / 1024).toFixed(1) + ' KB';
+        item.append(name, size);
+        fileList.append(item);
+      });
+    });
+
+    contactForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!contactForm.reportValidity()) return;
+      const files = Array.from(fileInput.files || []);
+      const fileError = validateContactFiles(files);
+      if (fileError) {
+        showContactStatus(fileError, 'error');
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.textContent = 'Enviando...';
+      showContactStatus('Estamos enviando tu mensaje. Espera un momento.', 'info');
+
+      try {
+        const response = await fetch('/api/enviar', {
+          method: 'POST',
+          body: new FormData(contactForm)
+        });
+        const result = await response.json();
+        if (!response.ok || !result.success) {
+          throw new Error(result.message || 'No se pudo enviar el mensaje.');
+        }
+        showContactStatus(result.message || 'Tu mensaje fue enviado correctamente.', 'success');
+        contactForm.reset();
+        fileList.replaceChildren();
+      } catch (error) {
+        showContactStatus(error.message || 'Ocurrió un error al enviar el mensaje. Inténtalo nuevamente.', 'error');
+      } finally {
+        submitButton.disabled = false;
+        submitButton.innerHTML = 'Enviar mensaje <span aria-hidden="true">↗</span>';
+      }
+    });
+  }
+
 })();
