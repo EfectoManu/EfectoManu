@@ -6,3 +6,10 @@
 .contact-page-section .contact-inner{background:#176ce4}
 .contact-page-section .contact-layout{padding:clamp(25px,4vw,48px)}
 @media(max-width:760px){.contact-page-heading{padding:48px 0 26px}.contact-page-section{padding-bottom:55px}}
+
+/* Redes sociales en la página de contacto */
+.contact-social{display:flex;flex-direction:column;gap:0;width:100%;margin-top:8px}
+.contact-social-label{font:500 10px "Space Grotesk",sans-serif;letter-spacing:.1em;color:#e9efff;margin-bottom:8px}
+.contact-social a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-top:1px solid #ffffff40;color:#fff;font-size:12px;transition:color .2s}
+.contact-social a:hover{color:#e3b51a}
+.contact-social a b{font:600 12px "Space Grotesk",sans-serif;text-align:right}
