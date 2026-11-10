@@ -20,7 +20,7 @@
     </a>
     <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"><span></span><span></span></button>
     <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
-      <a class="nav-link active" href="#inicio">Inicio</a><a class="nav-link" href="producciones.html">Mis producciones</a><a class="nav-link" href="servicios-creativos.html">Servicios creativos</a><a class="nav-link" href="#lab">LAB</a><a class="nav-link" href="#tienda">Tienda</a><a class="nav-link" href="#contacto">Contacto</a>
+      <a class="nav-link active" href="#inicio">Inicio</a><a class="nav-link" href="producciones.html">Mis producciones</a><a class="nav-link" href="servicios-creativos.html">Servicios creativos</a><a class="nav-link" href="#lab">LAB</a><a class="nav-link" href="#tienda">Tienda</a><a class="nav-link" href="contacto.html">Contacto</a>
       <button class="theme-toggle" type="button" aria-label="Activar modo noche" title="Cambiar tema"><span class="theme-icon" aria-hidden="true">☾</span></button>
     </nav>
   </header>
@@ -67,35 +67,11 @@
       <a class="text-link lab-all" href="#contacto">Explorar LAB <span>↗</span></a>
     </section>
     <section class="contact-section" id="contacto" aria-labelledby="contacto-title">
-      <div class="contact-inner contact-layout">
-        <div class="contact-intro">
-          <p class="section-kicker">05 / COLABORACIONES</p>
-          <h2 id="contacto-title">¿Creamos algo juntos?</h2>
-          <p>Nuevas historias comienzan con una conversación. Cuéntame qué tienes en mente y exploremos las posibilidades.</p>
-          <div class="contact-direct"><span>¿Prefieres escribir directamente?</span><a href="mailto:efectomanu@gmail.com">efectomanu@gmail.com ↗</a></div>
-        </div>
-        <form class="contact-form" id="contact-form" enctype="multipart/form-data" novalidate>
-          <div class="form-row">
-            <div class="form-field"><label for="contact-nombre">Nombre completo <span>*</span></label><input id="contact-nombre" name="nombre" type="text" maxlength="100" autocomplete="name" placeholder="¿Cómo te llamas?" required></div>
-            <div class="form-field"><label for="contact-correo">Correo electrónico <span>*</span></label><input id="contact-correo" name="correo" type="email" maxlength="150" autocomplete="email" placeholder="nombre@correo.com" required></div>
-          </div>
-          <div class="form-row">
-            <div class="form-field"><label for="contact-telefono">Teléfono</label><input id="contact-telefono" name="telefono" type="tel" maxlength="30" autocomplete="tel" placeholder="Tu número de contacto"></div>
-            <div class="form-field"><label for="contact-empresa">Empresa o marca</label><input id="contact-empresa" name="empresa" type="text" maxlength="120" placeholder="Nombre de tu proyecto o marca"></div>
-          </div>
-          <div class="form-field"><label for="contact-servicio">¿Qué te gustaría crear?</label><select id="contact-servicio" name="servicio"><option value="">Selecciona un servicio (opcional)</option><option>Producción audiovisual</option><option>Edición y narrativa</option><option>Animación y VFX</option><option>Diseño y experiencias digitales</option><option>Colaboración o propuesta</option><option>Otro</option></select></div>
-          <div class="form-field"><label for="contact-mensaje">Cuéntame sobre tu proyecto <span>*</span></label><textarea id="contact-mensaje" name="mensaje" rows="4" maxlength="3000" placeholder="Describe brevemente tu idea, necesidad o propuesta..." required></textarea></div>
-          <div class="form-field"><label for="contact-referencia">Enlace de referencia <small>(opcional)</small></label><input id="contact-referencia" name="referencia" type="url" maxlength="500" placeholder="https://..."></div>
-          <div class="form-field">
-            <label for="contact-archivos">Archivos adjuntos <small>(opcional)</small></label>
-            <div class="file-drop"><div><span class="file-symbol">↑</span><strong>Adjunta documentos o imágenes</strong><span>PDF, JPG, PNG o WEBP · Máximo 5 archivos · 3 MB en total</span></div><input id="contact-archivos" name="archivos" type="file" accept=".pdf,.jpg,.jpeg,.png,.webp,application/pdf,image/jpeg,image/png,image/webp" multiple></div>
-            <div id="contact-file-list" class="contact-file-list" aria-live="polite"></div>
-          </div>
-          <label class="consent-field"><input type="checkbox" name="autorizacion" required><span>Autorizo el tratamiento de mis datos personales para que EfectoManu pueda responder a esta solicitud. <a href="#privacidad">Conoce cómo usamos tus datos.</a> <b>*</b></span></label>
-          <button class="button button-primary contact-submit" id="contact-submit" type="submit">Enviar mensaje <span aria-hidden="true">↗</span></button>
-          <p class="contact-privacy" id="privacidad">Tus datos se utilizarán únicamente para atender tu mensaje y gestionar esta solicitud.</p>
-          <div class="contact-status" id="contact-status" role="status" aria-live="polite"></div>
-        </form>
+      <div class="contact-inner">
+        <p class="section-kicker">05 / COLABORACIONES</p>
+        <h2 id="contacto-title">¿Creamos algo juntos?</h2>
+        <p>Nuevas historias comienzan con una conversación.</p>
+        <a class="button button-primary" href="contacto.html">Hablemos <span aria-hidden="true">↗</span></a>
       </div>
     </section>
     <section class="store-note" id="tienda"><span class="store-index">04 / TIENDA</span><p>Este rincón está en construcción. Pronto, ideas que también podrás llevar contigo.</p><span class="store-status">PRÓXIMAMENTE <i></i></span></section>
