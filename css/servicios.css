@@ -154,11 +154,3 @@
 .services-hero-image .visual-caption{z-index:2;left:22px;bottom:19px;font-size:9px}
 @media(max-width:760px){.services-hero-image{aspect-ratio:1.76/1}.services-brand-lockup{left:16px;top:16px}.services-hero-image .visual-caption{left:16px;bottom:14px}}
 @media(prefers-reduced-motion:reduce){.services-hero-video{display:none}}
-
-.services-projects-intro{max-width:520px;color:var(--muted);font-size:14px;line-height:1.65;margin:12px 0 0}
-.services-project-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.services-project-links a{display:flex;flex-direction:column;gap:14px;padding:22px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);transition:border-color .2s,transform .2s}
-.services-project-links a:hover{border-color:var(--yellow);transform:translateY(-3px)}
-.services-project-links span{font:500 9px "Space Grotesk",sans-serif;letter-spacing:.12em;color:var(--muted)}
-.services-project-links b{font:600 19px "Space Grotesk",sans-serif}
-@media(max-width:560px){.services-project-links{grid-template-columns:1fr}}
