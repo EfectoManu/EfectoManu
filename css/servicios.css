@@ -64,3 +64,17 @@
 .selected-card:hover .selected-image:after{opacity:1;transform:translateY(0)}
 @media(max-width:760px){.services-hero-image{aspect-ratio:1.18/1}.services-hero .hero-index{gap:12px;flex-wrap:wrap}.services-hero .hero-index span:last-child{text-align:right}.service-tile{min-height:0}.selected-card-wide .selected-image{aspect-ratio:1.45/1}}
 @media(prefers-reduced-motion:reduce){.services-hero-image:before,.services-hero-image:after{animation:none}.service-tile,.selected-card,.selected-image img{transition:none}}
+
+
+/* Muestras audiovisuales enlazadas por proyecto */
+.selected-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;width:100%;margin:0 0 20px}
+.selected-links a{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:9px 11px;border:1px solid var(--border);border-radius:8px;color:var(--text);font:500 11px "Space Grotesk",sans-serif;transition:border-color .2s,background .2s}
+.selected-links a:hover,.selected-links a:focus-visible{border-color:var(--blue);background:var(--section)}
+.selected-links a span{color:var(--blue)}
+.selected-card-text{display:flex;flex-direction:column}
+.selected-text-visual{min-height:210px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;background:linear-gradient(135deg,#101827,#174b9b 65%,#e3b51a);color:#fff;font-family:"Space Grotesk",sans-serif}
+.selected-text-visual span{font-size:clamp(64px,10vw,100px);font-weight:700;letter-spacing:-.1em;line-height:.9}
+.selected-text-visual b{font-size:17px;letter-spacing:.28em}
+.selected-text-visual small{font-size:9px;letter-spacing:.16em;margin-top:14px;color:#ffffffc9}
+@media(max-width:760px){.selected-links{grid-template-columns:1fr 1fr}.selected-text-visual{min-height:170px}}
+@media(max-width:420px){.selected-links{grid-template-columns:1fr}}
