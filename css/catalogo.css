@@ -1,0 +1,31 @@
+.catalog-page{padding-bottom:70px}
+.catalog-intro{padding:76px 0 48px;max-width:850px}
+.catalog-intro h1{font:600 clamp(46px,7vw,82px)/.98 "Space Grotesk",sans-serif;letter-spacing:-.075em;margin:0;max-width:850px}
+.catalog-intro h1 span{color:var(--blue)}
+.catalog-intro>p:not(.eyebrow){font-size:16px;line-height:1.7;color:var(--muted);max-width:650px;margin:22px 0}
+.catalog-index{padding-top:16px;border-top:1px solid var(--border);font:500 9px "Space Grotesk",sans-serif;letter-spacing:.14em;color:var(--muted)}
+.catalog-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 24px}
+.catalog-card{min-width:0}
+.catalog-image{position:relative;display:block;aspect-ratio:4/3;overflow:hidden;background:var(--section)}
+.catalog-image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.catalog-card:hover .catalog-image img{transform:scale(1.035)}
+.catalog-open{position:absolute;right:14px;bottom:14px;background:var(--yellow);color:#111;padding:9px 12px;font:600 9px "Space Grotesk",sans-serif;letter-spacing:.1em}
+.catalog-copy{padding:15px 2px 0}
+.catalog-meta{font:500 9px "Space Grotesk",sans-serif;letter-spacing:.13em;color:var(--muted)}
+.catalog-copy h2{font:500 clamp(23px,3vw,32px)/1.15 Georgia,serif;margin:9px 0}
+.catalog-copy p{font-size:13px;color:var(--muted);line-height:1.65;max-width:520px;margin:0 0 13px}
+.catalog-link{font:600 10px "Space Grotesk",sans-serif;letter-spacing:.1em;color:var(--blue);text-transform:uppercase}
+.catalog-placeholder{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#121a2b,#176ce4 60%,#e3b51a);color:#fff}
+.placeholder-word{font:700 clamp(70px,12vw,130px)/.8 "Space Grotesk",sans-serif;letter-spacing:-.12em;text-align:center}
+.placeholder-word small{font-size:15px;letter-spacing:.3em}
+.catalog-end{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:75px 0 0;padding:32px;background:var(--section);border-radius:var(--radius)}
+.catalog-end h2{font:600 clamp(24px,3vw,36px) "Space Grotesk",sans-serif;letter-spacing:-.05em;margin:0}
+.service-catalog-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.service-catalog-card{position:relative;display:flex;flex-direction:column;min-height:250px;padding:26px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);transition:transform .2s,border-color .2s}
+.service-catalog-card:hover{transform:translateY(-4px);border-color:var(--yellow)}
+.service-catalog-number{font:500 11px "Space Grotesk",sans-serif;color:var(--muted)}
+.service-catalog-arrow{position:absolute;right:24px;top:22px;font-size:22px;color:var(--blue)}
+.service-catalog-card h2{font:600 clamp(23px,3vw,32px) "Space Grotesk",sans-serif;letter-spacing:-.05em;margin:auto 0 10px}
+.service-catalog-card p{font-size:13px;line-height:1.6;color:var(--muted);max-width:480px;margin:0 0 18px}
+.service-catalog-tags{font:500 9px "Space Grotesk",sans-serif;letter-spacing:.1em;color:var(--blue)}
+@media(max-width:650px){.catalog-intro{padding:50px 0 34px}.catalog-grid,.service-catalog-grid{grid-template-columns:1fr;gap:28px}.catalog-end{align-items:flex-start;flex-direction:column;padding:24px}}
