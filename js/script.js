@@ -42,6 +42,28 @@
 
   year.textContent = new Date().getFullYear();
 
+  // Carrusel del portafolio: navegación por botones, teclado y desplazamiento táctil.
+  const portfolioTrack = document.querySelector('#portfolio-track');
+  if (portfolioTrack) {
+    const previous = document.querySelector('[data-carousel-prev]');
+    const next = document.querySelector('[data-carousel-next]');
+    const position = document.querySelector('[data-carousel-position]');
+    const cards = Array.from(portfolioTrack.querySelectorAll('.portfolio-card'));
+    const updatePortfolioControls = () => {
+      const maxScroll = portfolioTrack.scrollWidth - portfolioTrack.clientWidth;
+      previous.disabled = portfolioTrack.scrollLeft <= 4;
+      next.disabled = portfolioTrack.scrollLeft >= maxScroll - 4;
+      const cardWidth = cards[0] ? cards[0].getBoundingClientRect().width + 18 : 1;
+      const current = Math.min(cards.length, Math.max(1, Math.round(portfolioTrack.scrollLeft / cardWidth) + 1));
+      position.textContent = String(current).padStart(2, '0') + ' — ' + String(cards.length).padStart(2, '0');
+    };
+    previous.addEventListener('click', () => portfolioTrack.scrollBy({ left: -portfolioTrack.clientWidth * 0.85, behavior: 'smooth' }));
+    next.addEventListener('click', () => portfolioTrack.scrollBy({ left: portfolioTrack.clientWidth * 0.85, behavior: 'smooth' }));
+    portfolioTrack.addEventListener('scroll', updatePortfolioControls, { passive: true });
+    window.addEventListener('resize', updatePortfolioControls);
+    updatePortfolioControls();
+  }
+
   // Formulario de contacto: validación y envío a la función serverless de Vercel.
   const contactForm = document.querySelector('#contact-form');
   if (contactForm) {
