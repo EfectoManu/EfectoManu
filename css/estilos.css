@@ -48,3 +48,6 @@
 :root[data-theme="dark"] .contact-status.is-info{background:#1c3151;color:#c5dcff}
 @media(max-width:850px){.contact-layout{grid-template-columns:1fr}.contact-intro{position:static}.contact-intro>p:not(.section-kicker){max-width:560px}.contact-form{padding:22px}}
 @media(max-width:520px){.contact-layout{padding:28px 17px;gap:24px}.contact-intro h2{font-size:36px}.contact-form{padding:17px;gap:14px}.form-row{grid-template-columns:1fr;gap:14px}.file-drop{align-items:flex-start;flex-direction:column}.file-drop input{width:100%}}
+
+/* Identidad tipográfica del logotipo en HOME */
+.home-page .brand-name{font-family:"Lilita One",sans-serif;font-weight:400;letter-spacing:-.025em}
