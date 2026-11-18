@@ -38,8 +38,8 @@
 
 
 /* Familío — tarjetas consistentes con el sistema visual del sitio */
-.familio-page .detail-hero-media{aspect-ratio:16/5;max-height:340px;margin-bottom:38px}
-.familio-page .detail-hero-media img{object-position:center 42%}
+.familio-page .detail-hero-media{aspect-ratio:auto;max-height:none;height:auto;overflow:visible;margin-bottom:38px}
+.familio-page .detail-hero-media img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center}
 .familio-series-section .section-heading{margin-bottom:28px}
 .familio-series-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 22px;align-items:stretch}
 .familio-series-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);transition:transform .2s,border-color .2s}
@@ -50,4 +50,4 @@
 .familio-series-copy h3{font:600 clamp(23px,2.7vw,30px)/1.12 "Space Grotesk",sans-serif;letter-spacing:-.05em;margin:10px 0 8px}
 .familio-series-copy p{font-size:13px;line-height:1.65;color:var(--muted);max-width:480px;margin:0 0 14px}
 .familio-series-copy .catalog-link{display:inline-block}
-@media(max-width:650px){.familio-series-list{grid-template-columns:1fr;gap:18px}.familio-page .detail-hero-media{aspect-ratio:16/7;max-height:230px}.familio-series-copy{padding:18px}}
+@media(max-width:650px){.familio-series-list{grid-template-columns:1fr;gap:18px}.familio-page .detail-hero-media{aspect-ratio:auto;max-height:none;height:auto}.familio-series-copy{padding:18px}}
