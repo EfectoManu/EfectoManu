@@ -42,3 +42,9 @@
 .catalog-copy p{flex:1;margin-bottom:18px}
 .catalog-link{display:inline-flex;margin-top:auto;padding-top:3px}
 @media(max-width:650px){.catalog-grid{gap:20px}.catalog-copy{padding:17px 18px 20px}}
+
+/* Etiquetas EXPLORAR del catálogo de proyectos: esquinas redondeadas */
+.catalog-card .catalog-open{
+  border-radius:7px;
+  padding:11px 14px;
+}
