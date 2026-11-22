@@ -118,7 +118,7 @@
 /* Portada editorial EfectoManu: imagen a la izquierda, título a la derecha */
 .catalog-page:has(> .detail-heading):has(> .detail-hero-media){
   display:grid;
-  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);
   column-gap:clamp(28px,5vw,72px);
   align-items:center;
 }
@@ -134,7 +134,7 @@
   grid-row:1;
   width:100%;
   height:auto;
-  max-height:440px;
+  max-height:560px;
   aspect-ratio:auto;
   display:block;
   overflow:hidden;
