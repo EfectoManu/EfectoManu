@@ -70,3 +70,17 @@
 @media(max-width:900px){.home-carousel{grid-auto-columns:calc((100% - 24px)/2)}}
 @media(max-width:620px){.carousel-heading-actions{gap:12px}.carousel-controls button{width:34px;height:34px}.home-carousel{grid-auto-columns:minmax(0,86%);grid-auto-columns:86%;gap:16px}.home-slide .card-body p{min-height:0}.carousel-hint{font-size:8px}}
 @media(prefers-reduced-motion:reduce){.home-carousel{scroll-behavior:auto}}
+
+
+/* Universitario a los 30: temporadas y episodios */
+.u30-season-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.u30-season-card{display:flex;flex-direction:column;align-items:flex-start;min-height:225px;padding:25px;border:1px solid var(--border);border-radius:16px;background:var(--card)}
+.u30-season-card h3{font:600 25px/1.15 "Space Grotesk",sans-serif;letter-spacing:-.04em;margin:13px 0 8px}
+.u30-season-card p{font-size:13px;line-height:1.65;color:var(--muted);margin:0 0 22px;flex:1}
+.u30-season-card .button{font-size:12px;min-height:42px;padding:10px 15px}
+.u30-episode-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.u30-episode{overflow:hidden;border:1px solid var(--border);border-radius:16px;background:var(--card)}
+.u30-episode .familio-series-player{aspect-ratio:16/9}
+.u30-episode-copy{padding:16px 18px 19px}
+.u30-episode-copy h3{font:600 19px/1.25 "Space Grotesk",sans-serif;margin:8px 0 12px}
+@media(max-width:620px){.u30-season-grid,.u30-episode-grid{grid-template-columns:1fr}.u30-season-card{min-height:190px}}
