@@ -29,3 +29,16 @@
 .service-catalog-card p{font-size:13px;line-height:1.6;color:var(--muted);max-width:480px;margin:0 0 18px}
 .service-catalog-tags{font:500 9px "Space Grotesk",sans-serif;letter-spacing:.1em;color:var(--blue)}
 @media(max-width:650px){.catalog-intro{padding:50px 0 34px}.catalog-grid,.service-catalog-grid{grid-template-columns:1fr;gap:28px}.catalog-end{align-items:flex-start;flex-direction:column;padding:24px}}
+
+
+/* Catálogos: tarjetas editoriales con esquinas redondeadas y acción uniforme */
+.catalog-grid{align-items:stretch;gap:28px 24px}
+.catalog-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid var(--border);border-radius:18px;background:var(--card);transition:transform .22s,border-color .22s,box-shadow .22s}
+.catalog-card:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:0 14px 35px #0000000d}
+.catalog-image{aspect-ratio:16/10;border-radius:0;overflow:hidden}
+.catalog-open{right:16px;bottom:16px;padding:10px 13px;border-radius:0;background:var(--yellow);color:#111;font:600 9px "Space Grotesk",sans-serif;letter-spacing:.1em}
+.catalog-copy{display:flex;flex-direction:column;align-items:flex-start;flex:1;padding:19px 21px 22px}
+.catalog-copy h2{margin:11px 0 9px}
+.catalog-copy p{flex:1;margin-bottom:18px}
+.catalog-link{display:inline-flex;margin-top:auto;padding-top:3px}
+@media(max-width:650px){.catalog-grid{gap:20px}.catalog-copy{padding:17px 18px 20px}}
