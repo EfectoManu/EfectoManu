@@ -48,3 +48,20 @@
   border-radius:7px;
   padding:11px 14px;
 }
+
+
+/* Proyectos: mismas tarjetas y acciones amarillas que Mis producciones */
+.catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:stretch;}
+.catalog-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid var(--border);border-radius:18px;background:var(--card);transition:transform .22s,border-color .22s,box-shadow .22s;}
+.catalog-card:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:0 14px 35px #0000000d;}
+.catalog-image{display:block;position:relative;aspect-ratio:16/10;overflow:hidden;border-radius:0;background:var(--section);}
+.catalog-image img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .45s;}
+.catalog-card:hover .catalog-image img{transform:scale(1.035);}
+.catalog-card .catalog-open{display:none;}
+.catalog-copy{display:flex;flex:1;flex-direction:column;align-items:stretch;padding:21px;}
+.catalog-meta{display:block;margin:0;color:var(--muted);font:500 10px "Space Grotesk",sans-serif;letter-spacing:.09em;}
+.catalog-copy h2{font:600 clamp(23px,2.1vw,29px)/1.12 "Space Grotesk",sans-serif;letter-spacing:-.045em;margin:12px 0 9px;}
+.catalog-copy p{flex:1;margin:0 0 20px;font-size:13px;line-height:1.65;color:var(--muted);}
+.catalog-copy .project-cta{align-self:stretch;width:100%;margin-top:auto;min-height:44px;padding:11px 12px;font-size:12px;gap:8px;}
+@media(max-width:900px){.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:650px){.catalog-grid{grid-template-columns:1fr;gap:18px;}.catalog-copy{padding:19px;}.catalog-copy h2{font-size:27px;}}
