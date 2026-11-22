@@ -28,3 +28,26 @@
 @media(max-width:800px){.productions-page .productions-intro{padding-block:48px 40px}.production-feature{grid-template-columns:1fr;gap:22px}.production-description{padding:0}.production-description h2{margin-top:17px}.intro-aside{min-width:140px}}
 @media(max-width:620px){.productions-page .productions-intro{display:block}.intro-aside{margin-top:26px;display:grid;grid-template-columns:1fr auto;border-left:0;border-top:1px solid var(--border);padding:14px 0 0}.intro-aside span:last-child{grid-column:1/-1}.production-poster{aspect-ratio:1.25/1}.production-pair{grid-template-columns:1fr;gap:16px;padding-bottom:45px}.productions-note{align-items:flex-start;flex-direction:column;padding-bottom:52px}.productions-note p{font-size:17px}.poster-play{width:46px;height:46px}}
 @media(prefers-reduced-motion:reduce){.production-poster img,.production-card-image img{transition:none}}
+
+/* Producciones — composición editorial y tarjetas alineadas */
+.productions-page{max-width:1320px}
+.productions-page .productions-intro{padding-block:78px 58px;align-items:flex-end}
+.productions-intro h1{max-width:780px}
+.intro-aside{min-width:190px}
+.production-feature{grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:clamp(24px,4vw,58px);padding-bottom:58px}
+.production-poster{aspect-ratio:16/10;border-radius:14px}
+.production-description{max-width:500px}
+.production-description h2{max-width:470px}
+.production-pair{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;padding-bottom:72px;align-items:stretch}
+.production-card{min-width:0;border-radius:14px;transition:transform .22s,border-color .22s}
+.production-card:hover{transform:translateY(-4px);border-color:var(--blue)}
+.production-card-image{aspect-ratio:16/10;background:#111}
+.production-card-image img{object-fit:cover}
+.production-card-copy{display:flex;flex-direction:column;align-items:flex-start;padding:21px 21px 23px}
+.production-card-copy .production-meta{width:100%;min-height:25px;align-items:flex-start;flex-wrap:wrap}
+.production-card-copy h2{font-size:clamp(24px,2.2vw,30px);line-height:1.08;margin:16px 0 10px}
+.production-card-copy p{font-size:13px;line-height:1.65;margin:0 0 20px;flex:1}
+.production-card-copy .text-link{margin-top:auto}
+.productions-note{padding-top:28px}
+@media(max-width:900px){.production-feature{grid-template-columns:1fr 1fr}.production-pair{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.productions-page .productions-intro{padding-block:48px 38px}.production-feature{grid-template-columns:1fr;gap:20px}.production-description{padding:0}.production-pair{grid-template-columns:1fr;gap:16px}.production-card-copy{padding:19px}.production-poster{aspect-ratio:16/10}}
