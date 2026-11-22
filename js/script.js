@@ -134,4 +134,17 @@
     });
   }
 
+  // Controles accesibles de los carruseles horizontales del home.
+  document.querySelectorAll('[data-carousel-prev], [data-carousel-next]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const id = button.dataset.carouselPrev || button.dataset.carouselNext;
+      const carousel = document.getElementById(id);
+      if (!carousel) return;
+      const direction = button.hasAttribute('data-carousel-next') ? 1 : -1;
+      const slide = carousel.querySelector('.home-slide');
+      const distance = slide ? slide.getBoundingClientRect().width + parseFloat(getComputedStyle(carousel).columnGap || 0) : carousel.clientWidth * .8;
+      carousel.scrollBy({ left: direction * distance, behavior: 'smooth' });
+    });
+  });
+
 })();
