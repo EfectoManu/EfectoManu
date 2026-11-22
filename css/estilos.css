@@ -50,3 +50,23 @@
 @media(max-width:850px){.contact-layout{grid-template-columns:1fr}.contact-intro{position:static}.contact-intro>p:not(.section-kicker){max-width:560px}.contact-form{padding:22px}}
 @media(max-width:520px){.contact-layout{padding:28px 17px;gap:24px}.contact-intro h2{font-size:36px}.contact-form{padding:17px;gap:14px}.form-row{grid-template-columns:1fr;gap:14px}.file-drop{align-items:flex-start;flex-direction:column}.file-drop input{width:100%}}
 
+
+
+/* Home: carruseles horizontales de producciones y proyectos */
+.carousel-heading-actions{display:flex;align-items:center;gap:22px}
+.carousel-controls{display:flex;gap:7px}
+.carousel-controls button{width:38px;height:38px;border:1px solid var(--border);border-radius:50%;background:transparent;color:var(--ink);font-size:20px;line-height:1;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.carousel-controls button:hover{background:var(--yellow);border-color:var(--yellow);color:#111}
+.home-carousel{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 48px)/3);gap:24px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:2px 2px 18px;scrollbar-width:thin;scrollbar-color:var(--yellow) var(--section)}
+.home-slide{display:flex;flex-direction:column;scroll-snap-align:start;min-width:0}
+.home-slide .card-image{aspect-ratio:16/10}
+.home-slide .card-body p{min-height:68px}
+.home-card-open{position:absolute;right:14px;bottom:14px;background:var(--yellow);color:#111;padding:10px 13px;border-radius:7px;font:600 9px "Space Grotesk",sans-serif;letter-spacing:.1em}
+.home-slide .catalog-placeholder{display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#121a2b,#176ce4 60%,#e3b51a);color:#fff}
+.home-slide .placeholder-word{font:700 clamp(70px,10vw,120px)/.8 "Space Grotesk",sans-serif;letter-spacing:-.12em;text-align:center}
+.home-slide .placeholder-word small{font-size:15px;letter-spacing:.3em}
+.carousel-hint{display:flex;justify-content:flex-end;gap:10px;margin:8px 2px 0;color:var(--muted);font:500 9px "Space Grotesk",sans-serif;letter-spacing:.12em}
+.carousel-hint span{color:var(--yellow);font-size:15px;line-height:10px}
+@media(max-width:900px){.home-carousel{grid-auto-columns:calc((100% - 24px)/2)}}
+@media(max-width:620px){.carousel-heading-actions{gap:12px}.carousel-controls button{width:34px;height:34px}.home-carousel{grid-auto-columns:minmax(0,86%);grid-auto-columns:86%;gap:16px}.home-slide .card-body p{min-height:0}.carousel-hint{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.home-carousel{scroll-behavior:auto}}
