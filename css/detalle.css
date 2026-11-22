@@ -113,3 +113,56 @@
     height:auto;
   }
 }
+
+
+/* Portada editorial EfectoManu: imagen a la izquierda, título a la derecha */
+.catalog-page:has(> .detail-heading):has(> .detail-hero-media){
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  column-gap:clamp(28px,5vw,72px);
+  align-items:center;
+}
+.catalog-page:has(> .detail-heading):has(> .detail-hero-media) > .detail-heading{
+  grid-column:2;
+  grid-row:1;
+  align-self:center;
+  margin:0;
+  padding-block:20px;
+}
+.catalog-page:has(> .detail-heading):has(> .detail-hero-media) > .detail-hero-media{
+  grid-column:1;
+  grid-row:1;
+  width:100%;
+  height:auto;
+  max-height:440px;
+  aspect-ratio:auto;
+  display:block;
+  overflow:hidden;
+  margin:0;
+  padding:0;
+  background:transparent;
+  border-radius:18px;
+}
+.catalog-page:has(> .detail-heading):has(> .detail-hero-media) > .detail-hero-media img{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:440px;
+  object-fit:contain;
+  object-position:center;
+  border-radius:18px;
+}
+.catalog-page:has(> .detail-heading):has(> .detail-hero-media) > .detail-story,
+.catalog-page:has(> .detail-heading):has(> .detail-hero-media) > .detail-work,
+.catalog-page:has(> .detail-heading):has(> .detail-hero-media) > .detail-cta,
+.catalog-page:has(> .detail-heading):has(> .detail-hero-media) > .related-projects{
+  grid-column:1/-1;
+}
+.catalog-page:has(> .detail-heading):has(> .detail-hero-media) > .detail-story{margin-top:clamp(34px,5vw,64px)}
+@media(max-width:760px){
+ .catalog-page:has(> .detail-heading):has(> .detail-hero-media){display:flex;flex-direction:column;gap:0;align-items:stretch}
+ .catalog-page:has(> .detail-heading):has(> .detail-hero-media) > .detail-heading{order:0;padding-block:10px 22px}
+ .catalog-page:has(> .detail-heading):has(> .detail-hero-media) > .detail-hero-media{order:1;margin:0 0 30px;max-height:none}
+ .catalog-page:has(> .detail-heading):has(> .detail-hero-media) > .detail-hero-media img{max-height:none}
+ .catalog-page:has(> .detail-heading):has(> .detail-hero-media) > .detail-story{order:2;margin-top:0}
+}
