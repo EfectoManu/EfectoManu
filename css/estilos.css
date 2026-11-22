@@ -84,3 +84,22 @@
 .u30-episode-copy{padding:16px 18px 19px}
 .u30-episode-copy h3{font:600 19px/1.25 "Space Grotesk",sans-serif;margin:8px 0 12px}
 @media(max-width:620px){.u30-season-grid,.u30-episode-grid{grid-template-columns:1fr}.u30-season-card{min-height:190px}}
+
+
+/* Home móvil: primero mensaje y video, después acciones en paralelo */
+@media(min-width:761px){
+  .hero-media{grid-column:2;grid-row:1 / span 3;}
+  .hero-actions,.hero-index{grid-column:1;}
+}
+@media(max-width:760px){
+  .hero{grid-template-columns:minmax(0,1fr);}
+  .hero-copy,.hero-media,.hero-actions,.hero-index{grid-column:1;}
+  .hero-media{grid-row:auto;}
+  .hero-actions{display:flex;flex-direction:row;flex-wrap:nowrap;gap:10px;max-width:none;}
+  .hero-actions .button{flex:1 1 0;min-width:0;width:auto;padding:12px 9px;font-size:13px;gap:7px;white-space:nowrap;}
+  .hero-index{margin-top:28px;}
+}
+@media(max-width:380px){
+  .hero-actions{gap:7px;}
+  .hero-actions .button{font-size:11px;padding-inline:6px;gap:5px;}
+}
