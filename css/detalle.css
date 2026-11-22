@@ -60,3 +60,18 @@
 .cocina-roja-player{position:relative;aspect-ratio:16/9;max-width:1000px;background:#111}
 .cocina-roja-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 @media(max-width:760px){.cocina-roja-page .detail-hero-media{aspect-ratio:4/3}}
+
+
+/* La Cocina de la Roja — temporada 01 en tarjetas */
+.cocina-roja-page .cocina-roja-hero{aspect-ratio:16/7;margin-bottom:42px}
+.cocina-roja-page .cocina-roja-hero img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.cocina-roja-series .section-heading{margin-bottom:28px}
+.roja-video-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 22px;align-items:stretch}
+.roja-video-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);transition:transform .2s,border-color .2s}
+.roja-video-card:hover{transform:translateY(-3px);border-color:var(--yellow)}
+.roja-video-card .familio-series-player{position:relative;order:0;aspect-ratio:16/9;background:#111;overflow:hidden}
+.roja-video-card .familio-series-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.roja-video-card .familio-series-copy{order:1;padding:20px 22px 22px}
+.roja-video-card .familio-series-copy h3{font:600 clamp(23px,2.7vw,30px)/1.12 "Space Grotesk",sans-serif;letter-spacing:-.05em;margin:10px 0 8px}
+.roja-video-card .familio-series-copy p{font-size:13px;line-height:1.65;color:var(--muted);margin:0 0 14px}
+@media(max-width:650px){.roja-video-list{grid-template-columns:1fr;gap:18px}.roja-video-card .familio-series-copy{padding:18px}.cocina-roja-page .cocina-roja-hero{aspect-ratio:4/3}}
