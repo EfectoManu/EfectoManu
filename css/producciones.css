@@ -51,3 +51,18 @@
 .productions-note{padding-top:28px}
 @media(max-width:900px){.production-feature{grid-template-columns:1fr 1fr}.production-pair{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.productions-page .productions-intro{padding-block:48px 38px}.production-feature{grid-template-columns:1fr;gap:20px}.production-description{padding:0}.production-pair{grid-template-columns:1fr;gap:16px}.production-card-copy{padding:19px}.production-poster{aspect-ratio:16/10}}
+
+
+/* Producciones: misma etiqueta EXPLORAR y bordes redondeados del catálogo */
+.production-poster,.production-card-image{border-radius:18px}
+.production-poster{overflow:hidden}
+.production-poster .catalog-open,.production-card-image .catalog-open{position:absolute;right:16px;bottom:16px;left:auto;top:auto;padding:10px 13px;border-radius:0;background:var(--yellow);color:#111;font:600 9px "Space Grotesk",sans-serif;letter-spacing:.1em}
+.production-poster .poster-stamp,.production-poster .poster-index{border-radius:0}
+.production-card{border-radius:18px;overflow:hidden}
+.production-card-image{border-radius:0;aspect-ratio:16/10}
+.production-card-image .catalog-open{z-index:2}
+.production-card-copy{min-height:225px}
+.production-card-copy .production-meta{display:none}
+.production-card-copy h2{margin-top:2px}
+.production-card-copy p{flex:1}
+@media(max-width:620px){.production-card-copy{min-height:0}}
