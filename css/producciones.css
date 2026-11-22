@@ -66,3 +66,9 @@
 .production-card-copy h2{margin-top:2px}
 .production-card-copy p{flex:1}
 @media(max-width:620px){.production-card-copy{min-height:0}}
+
+/* Etiqueta EXPLORAR: esquinas suavemente redondeadas */
+.production-poster .catalog-open,.production-card-image .catalog-open{
+  border-radius:7px;
+  padding:11px 14px;
+}
