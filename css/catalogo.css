@@ -65,3 +65,32 @@
 .catalog-copy .project-cta{align-self:stretch;width:100%;margin-top:auto;min-height:44px;padding:11px 12px;font-size:12px;gap:8px;}
 @media(max-width:900px){.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:650px){.catalog-grid{grid-template-columns:1fr;gap:18px;}.catalog-copy{padding:19px;}.catalog-copy h2{font-size:27px;}}
+
+
+/* Dirección de arte del catálogo de proyectos: portada editorial + archivo modular */
+.catalog-page{padding-bottom:84px}
+.catalog-intro{position:relative;max-width:none;padding:clamp(54px,7vw,88px) 0 38px;margin-bottom:30px;border-bottom:1px solid var(--border)}
+.catalog-intro h1{max-width:900px;font-size:clamp(48px,7.2vw,92px);line-height:.96;letter-spacing:-.085em}
+.catalog-intro>p:not(.eyebrow){max-width:590px;margin:20px 0 25px;font-size:15px}
+.catalog-index{display:inline-flex;align-items:center;gap:12px;padding-top:13px;font-size:9px}
+.catalog-index:before{content:"";width:24px;height:2px;background:var(--yellow)}
+.catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 24px;align-items:stretch}
+.catalog-card{border-radius:16px;background:var(--card)}
+.catalog-card:first-child{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);min-height:330px}
+.catalog-card:first-child .catalog-image{height:100%;min-height:330px;aspect-ratio:auto}
+.catalog-card:first-child .catalog-copy{justify-content:center;padding:clamp(24px,4vw,48px)}
+.catalog-card:first-child .catalog-copy h2{font-size:clamp(30px,4vw,48px);max-width:430px}
+.catalog-card:first-child .catalog-copy p{max-width:390px}
+.catalog-copy{padding:20px 22px 23px}
+.catalog-image img{transition:transform .65s cubic-bezier(.2,.7,.2,1)}
+.catalog-card:hover .catalog-image img{transform:scale(1.045)}
+.catalog-copy .project-cta{min-height:46px}
+.catalog-end{margin-top:62px;padding:clamp(24px,4vw,40px);border-radius:16px}
+@media(max-width:760px){
+ .catalog-intro{padding:48px 0 28px;margin-bottom:22px}
+ .catalog-grid{grid-template-columns:1fr;gap:19px}
+ .catalog-card:first-child{grid-column:auto;display:flex;min-height:0}
+ .catalog-card:first-child .catalog-image{min-height:0;aspect-ratio:16/10}
+ .catalog-card:first-child .catalog-copy{padding:19px}
+ .catalog-card:first-child .catalog-copy h2{font-size:29px}
+}
