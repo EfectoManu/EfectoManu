@@ -159,3 +159,22 @@ textarea:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* Sistema social unificado: iconos como navegación visual principal */
+.social-icon-links{display:flex;align-items:center;justify-content:flex-start;gap:14px;margin:14px 0 0}
+.social-icon-links a{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;min-width:48px;padding:0;border:1px solid currentColor;border-radius:50%;box-sizing:border-box;line-height:0;opacity:.94;transition:background .22s,border-color .22s,color .22s,transform .22s}
+.social-icon-links a svg{display:block;width:22px;height:22px;margin:0;overflow:visible}
+.social-icon-links a:hover{background:var(--yellow);border-color:var(--yellow);color:#111;opacity:1;transform:translateY(-3px)}
+.footer-links .social-icon-links{gap:12px;margin:8px 0 0}
+.footer-links .social-icon-links a{flex-basis:46px;width:46px;height:46px;min-width:46px}
+.footer-links .social-icon-links a svg{width:22px;height:22px}
+.contact-social .social-icon-links{justify-content:flex-start;gap:16px;margin:18px 0 4px}
+.contact-social .social-icon-links a{flex-basis:52px;width:52px;height:52px;min-width:52px}
+.contact-social .social-icon-links a svg{width:24px;height:24px}
+.contact-social .social-icon-links a:hover,.footer-links .social-icon-links a:hover{color:#111}
+@media(max-width:600px){
+ .social-icon-links{gap:12px}
+ .footer-links .social-icon-links a{flex-basis:44px;width:44px;height:44px;min-width:44px}
+ .contact-social .social-icon-links a{flex-basis:50px;width:50px;height:50px;min-width:50px}
+}
