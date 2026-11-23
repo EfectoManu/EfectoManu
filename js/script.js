@@ -58,7 +58,7 @@
 
   // Resalta la página actual, incluidas las páginas de detalle y las rutas servidas desde /.
   if (nav) {
-    const currentPath = window.location.pathname.replace(/\\/+$/, '') || '/';
+    const currentPath = window.location.pathname.replace(/\/+$/, '') || '/';
     const isHome = currentPath === '/' || currentPath.endsWith('/index.html');
     const parentRoutes = [
       ['/proyectos/', 'proyectos.html'],
