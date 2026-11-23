@@ -40,7 +40,9 @@ export default async function handler(req, res) {
       maxFileSize: MAX_TOTAL_SIZE,
       maxTotalFileSize: MAX_TOTAL_SIZE,
       allowEmptyFiles: false,
-      filter: () => true
+      // Los navegadores envían a veces un archivo vacío si no se selecciona ningún adjunto.
+      // Ignoramos ese campo sin nombre; los archivos elegidos sí pasan por las validaciones.
+      filter: (part) => Boolean(part.originalFilename)
     });
 
     const [fields, files] = await form.parse(req);
