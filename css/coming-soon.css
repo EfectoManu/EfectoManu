@@ -31,3 +31,5 @@
 .lab-next-semesters h3{font:600 23px "Space Grotesk",sans-serif;letter-spacing:-.04em;margin:14px 0 7px}
 .lab-next-semesters p{color:var(--muted);font-size:12px;line-height:1.65;margin:0}
 @media(max-width:760px){.lab-project-card{grid-template-columns:1fr}.lab-project-visual{min-height:290px}.lab-project-copy{padding:25px}.lab-next-semesters{grid-template-columns:1fr}}
+
+.lab-project-visual-image{display:block;background:#171b2b}.lab-project-visual-image img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 48%}.lab-project-visual-image:after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(transparent,#080d18a8)}.lab-project-visual-image .lab-project-stamp,.lab-project-visual-image .lab-project-coordinates{z-index:2;color:#fff;text-shadow:0 1px 8px #000}
