@@ -73,3 +73,28 @@
  .eggspace-prototype-frame--mobile{width:min(100%,340px);max-height:none;aspect-ratio:9/16;border-width:6px;border-radius:24px}
  .eggspace-design-link{align-items:flex-start;flex-direction:column;padding:26px 0 40px;margin-bottom:45px}
 }
+
+/* EggSpace — recuperar portada editorial original y dar protagonismo al prototipo */
+.eggspace-service-hero{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;gap:clamp(30px,5vw,70px);padding:70px 0 56px}
+.eggspace-service-hero h1{font:600 clamp(48px,6vw,76px)/.98 "Space Grotesk",sans-serif;letter-spacing:-.07em;max-width:560px}
+.eggspace-service-hero .service-detail-lead{max-width:490px}
+.eggspace-service-hero .service-detail-art{aspect-ratio:5/4;min-height:300px}
+.eggspace-prototype--showcase{grid-template-columns:minmax(0,.8fr) minmax(280px,1fr);align-items:center;gap:clamp(28px,5vw,68px);padding:clamp(24px,4vw,44px);margin:0 0 65px;background:var(--section);border:1px solid var(--border)}
+.eggspace-prototype--showcase .eggspace-prototype-heading h2{font:600 clamp(32px,4vw,48px)/1.02 "Space Grotesk",sans-serif;letter-spacing:-.06em;margin:12px 0}
+.eggspace-prototype--showcase .eggspace-prototype-heading>p:not(.section-kicker){max-width:390px}
+.eggspace-prototype-frame--mobile{position:relative;width:min(100%,390px);height:auto;aspect-ratio:9/16;justify-self:center;overflow:hidden;border:7px solid #171b2b;border-radius:26px;background:#171b2b;box-shadow:0 18px 55px #11182724}
+.eggspace-prototype-frame--mobile iframe{position:absolute;inset:0;display:block;width:100%;height:100%;border:0;background:#fff}
+.eggspace-loading{position:absolute;z-index:2;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#171b2b;transition:opacity .35s ease,visibility .35s ease}
+.eggspace-loading>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.eggspace-loading-label{position:absolute;left:10px;right:10px;bottom:18px;display:flex;align-items:center;justify-content:center;gap:9px;padding:11px 14px;border-radius:999px;background:#101827d9;color:#fff;font:500 11px "Space Grotesk",sans-serif;letter-spacing:.04em;backdrop-filter:blur(8px)}
+.eggspace-spinner{width:13px;height:13px;border:2px solid #ffffff66;border-top-color:#e3b51a;border-radius:50%;animation:eggspace-spin .8s linear infinite}
+.eggspace-loading.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+@keyframes eggspace-spin{to{transform:rotate(360deg)}}
+@media(max-width:760px){
+ .eggspace-service-hero{grid-template-columns:1fr;gap:25px;padding:46px 0 38px}
+ .eggspace-service-hero h1{font-size:clamp(44px,11vw,62px)}
+ .eggspace-service-hero .service-detail-art{aspect-ratio:5/4;min-height:0}
+ .eggspace-prototype--showcase{grid-template-columns:1fr;gap:22px;padding:22px 17px;margin-bottom:45px}
+ .eggspace-prototype-frame--mobile{width:min(100%,360px);height:auto;aspect-ratio:9/16;max-height:none;border-width:6px;border-radius:23px}
+ .eggspace-prototype-frame--mobile iframe{width:100%;height:100%}
+}
