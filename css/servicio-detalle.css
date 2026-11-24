@@ -25,3 +25,12 @@
 .eggspace-prototype-frame{position:relative;aspect-ratio:16/10;overflow:hidden;border-radius:10px;background:#171717}
 .eggspace-prototype-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 @media(max-width:760px){.eggspace-case-intro{grid-template-columns:1fr;gap:12px}.eggspace-pillars{grid-template-columns:1fr;padding-bottom:45px}.eggspace-prototype{grid-template-columns:1fr;padding:23px;gap:20px}.eggspace-prototype-frame{aspect-ratio:4/3}}
+
+/* Créditos colaborativos de EggSpace */
+.eggspace-credits{padding:0 0 65px;max-width:850px}
+.eggspace-credits h2{font:600 clamp(28px,3.5vw,40px)/1.05 "Space Grotesk",sans-serif;letter-spacing:-.05em;margin:9px 0}
+.eggspace-credits>p:not(.section-kicker){color:var(--muted);font-size:13px}
+.eggspace-credit-list{display:flex;flex-wrap:wrap;gap:10px}
+.eggspace-credit-list span{padding:11px 15px;border:1px solid var(--border);border-radius:999px;background:var(--card);font:500 12px "Space Grotesk",sans-serif}
+.lab-project-credits{margin:18px 0;color:var(--muted);font-size:12px;line-height:1.6}
+.lab-project-credits strong{color:var(--text)}
