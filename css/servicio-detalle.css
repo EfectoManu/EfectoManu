@@ -39,3 +39,8 @@
 
 .service-detail-hero--text-only{grid-template-columns:minmax(0,850px);padding-bottom:64px}.service-detail-hero--text-only .service-detail-lead{max-width:680px}
 .eggspace-art{background:#171b2b}.eggspace-art img{object-fit:cover;object-position:center 48%}.eggspace-art:after{inset:65% 0 0;background:linear-gradient(transparent,#080d18aa)}
+
+/* Edición y narrativa: protagonismo para la selección audiovisual */
+.service-video-editorial{padding-bottom:58px}.service-editorial-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.service-editorial-item{display:flex;flex-direction:column;gap:13px;padding:0 0 16px;border:0}.service-editorial-player{width:100%;aspect-ratio:16/9;border-radius:var(--radius)}.service-editorial-copy h3{font-size:clamp(19px,2vw,25px);margin:8px 0 4px}.service-editorial-copy>span{font-size:9px}.service-editorial-copy>a{margin-top:6px}.service-detail-hero--text-only{padding-bottom:38px}.service-detail-hero--text-only .service-detail-lead{max-width:560px;margin-top:14px}.service-detail-hero--text-only .text-link{display:inline-block;margin-top:18px}@media(max-width:760px){.service-editorial-list{grid-template-columns:1fr;gap:24px}.service-editorial-item{padding-bottom:18px;border-bottom:1px solid var(--border)}}
+/* EggSpace: mantener el logotipo centrado en la fotografía vertical */
+.eggspace-art img{object-fit:cover;object-position:50% 50%}.lab-project-visual-image img{object-fit:cover;object-position:50% 50%}
