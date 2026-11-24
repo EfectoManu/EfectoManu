@@ -2,3 +2,56 @@
 
 /* Selección audiovisual en formato editorial */
 .service-video-editorial>h2{font:600 clamp(32px,4vw,48px)/1.05 "Space Grotesk",sans-serif;letter-spacing:-.055em;margin:8px 0 12px}.service-video-editorial>.detail-lead{max-width:650px;margin:0 0 30px}.service-editorial-list{display:flex;flex-direction:column;gap:28px}.service-editorial-item{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);gap:30px;align-items:center;padding:0 0 28px;border-bottom:1px solid var(--border)}.service-editorial-player{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:var(--radius);background:var(--section)}.service-editorial-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.service-editorial-copy>span{font:500 9px "Space Grotesk",sans-serif;letter-spacing:.12em;color:var(--muted)}.service-editorial-copy h3{font:600 clamp(23px,2.5vw,32px)/1.12 "Space Grotesk",sans-serif;letter-spacing:-.045em;margin:13px 0 10px}.service-editorial-copy p{font-size:14px;line-height:1.7;color:var(--muted);margin:0 0 17px}.service-editorial-copy>a{display:inline-block;color:var(--blue);font:600 11px "Space Grotesk",sans-serif;margin:0 16px 8px 0}.service-editorial-copy>a.service-editorial-project{color:var(--muted)}@media(max-width:760px){.service-editorial-item{grid-template-columns:1fr;gap:17px}.service-editorial-copy h3{font-size:25px}.service-editorial-list{gap:23px}}
+
+
+/* EggSpace — caso de estudio de diseño de experiencias digitales */
+.eggspace-art{display:grid;place-items:center;background:radial-gradient(circle at 50% 48%,#315ca6 0,#172b50 48%,#11151d 82%)}
+.eggspace-art:after{inset:55% 0 0}
+.eggspace-art-orbit{position:absolute;width:76%;aspect-ratio:1;border:1px solid #ffffff55;border-radius:50%;transform:rotate(-28deg) scaleY(.43)}
+.eggspace-art-title{position:relative;z-index:1;color:#f5f3ea;font:700 clamp(48px,7vw,82px)/.9 "Space Grotesk",sans-serif;letter-spacing:-.09em;text-shadow:0 8px 40px #0008}
+.eggspace-art-title span{display:block;font-size:.42em;letter-spacing:.28em;text-align:center;color:#f1c45c}
+.eggspace-art-caption{position:absolute;z-index:2;left:18px;bottom:17px;color:#ffffffc9;font:500 9px "Space Grotesk",sans-serif;letter-spacing:.15em}
+.eggspace-case-intro{display:grid;grid-template-columns:1fr 1fr;gap:38px;padding:5px 0 45px}
+.eggspace-case-intro h2{font:600 clamp(30px,4vw,48px)/1.05 "Space Grotesk",sans-serif;letter-spacing:-.06em;margin:10px 0}
+.eggspace-case-intro>p{align-self:end;color:var(--muted);font-size:14px;line-height:1.8;margin:0}
+.eggspace-pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding-bottom:70px}
+.eggspace-pillars article{padding:23px;border:1px solid var(--border);border-radius:var(--radius);background:var(--card)}
+.eggspace-pillars article>span{color:var(--muted);font:600 9px "Space Grotesk",sans-serif;letter-spacing:.12em}
+.eggspace-pillars h3{font:600 22px/1.12 "Space Grotesk",sans-serif;letter-spacing:-.04em;margin:24px 0 9px}
+.eggspace-pillars p{color:var(--muted);font-size:12px;line-height:1.7;margin:0}
+.eggspace-prototype{display:grid;grid-template-columns:.7fr 1.3fr;gap:32px;align-items:center;padding:36px;margin-bottom:65px;border-radius:var(--radius);background:var(--section)}
+.eggspace-prototype h2{font:600 clamp(28px,3.5vw,40px)/1.05 "Space Grotesk",sans-serif;letter-spacing:-.055em;margin:10px 0}
+.eggspace-prototype p:not(.section-kicker){color:var(--muted);font-size:13px;line-height:1.7}
+.eggspace-prototype-frame{position:relative;aspect-ratio:16/10;overflow:hidden;border-radius:10px;background:#171717}
+.eggspace-prototype-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media(max-width:760px){.eggspace-case-intro{grid-template-columns:1fr;gap:12px}.eggspace-pillars{grid-template-columns:1fr;padding-bottom:45px}.eggspace-prototype{grid-template-columns:1fr;padding:23px;gap:20px}.eggspace-prototype-frame{aspect-ratio:4/3}}
+
+/* Créditos colaborativos de EggSpace */
+.eggspace-credits{padding:0 0 65px;max-width:850px}
+.eggspace-credits h2{font:600 clamp(28px,3.5vw,40px)/1.05 "Space Grotesk",sans-serif;letter-spacing:-.05em;margin:9px 0}
+.eggspace-credits>p:not(.section-kicker){color:var(--muted);font-size:13px}
+.eggspace-credit-list{display:flex;flex-wrap:wrap;gap:10px}
+.eggspace-credit-list span{padding:11px 15px;border:1px solid var(--border);border-radius:999px;background:var(--card);font:500 12px "Space Grotesk",sans-serif}
+.lab-project-credits{margin:18px 0;color:var(--muted);font-size:12px;line-height:1.6}
+.lab-project-credits strong{color:var(--text)}
+
+/* Edición y narrativa — encabezado editorial sin imagen */
+
+.service-detail-hero--text-only{grid-template-columns:minmax(0,850px);padding-bottom:64px}.service-detail-hero--text-only .service-detail-lead{max-width:680px}
+.eggspace-art{background:#171b2b}.eggspace-art img{object-fit:cover;object-position:center 48%}.eggspace-art:after{inset:65% 0 0;background:linear-gradient(transparent,#080d18aa)}
+
+/* Edición y narrativa: protagonismo para la selección audiovisual */
+.service-video-editorial{padding-bottom:58px}.service-editorial-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.service-editorial-item{display:flex;flex-direction:column;gap:13px;padding:0 0 16px;border:0}.service-editorial-player{width:100%;aspect-ratio:16/9;border-radius:var(--radius)}.service-editorial-copy h3{font-size:clamp(19px,2vw,25px);margin:8px 0 4px}.service-editorial-copy>span{font-size:9px}.service-editorial-copy>a{margin-top:6px}.service-detail-hero--text-only{padding-bottom:38px}.service-detail-hero--text-only .service-detail-lead{max-width:560px;margin-top:14px}.service-detail-hero--text-only .text-link{display:inline-block;margin-top:18px}@media(max-width:760px){.service-editorial-list{grid-template-columns:1fr;gap:24px}.service-editorial-item{padding-bottom:18px;border-bottom:1px solid var(--border)}}
+/* EggSpace: mantener el logotipo centrado en la fotografía vertical */
+.eggspace-art img{object-fit:cover;object-position:50% 50%}.lab-project-visual-image img{object-fit:cover;object-position:50% 50%}
+
+/* Servicios de edición: contenido breve para equilibrar el encabezado y los videos */
+.editing-services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding:8px 0 58px}.editing-services article{padding:20px 20px 18px;border:1px solid var(--border);border-radius:var(--radius);background:var(--card)}.editing-services article>span{font:600 9px "Space Grotesk",sans-serif;letter-spacing:.12em;color:var(--blue)}.editing-services h2{font:600 19px/1.15 "Space Grotesk",sans-serif;letter-spacing:-.04em;margin:16px 0 7px}.editing-services p{font-size:12px;line-height:1.6;color:var(--muted);margin:0}.eggspace-art img{object-fit:cover;object-position:50% 50%}.eggspace-art{overflow:hidden}@media(max-width:760px){.editing-services{grid-template-columns:1fr;gap:10px;padding-bottom:40px}.editing-services article{padding:16px}}
+
+
+
+
+/* EggSpace: mismo encuadre editorial que la miniatura del LAB */
+.eggspace-art--logo{background:#171b2b;display:block;}
+.eggspace-art--logo img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 48%;display:block;}
+.eggspace-art--logo:after{display:block;inset:55% 0 0;background:linear-gradient(transparent,#080d18a8);}

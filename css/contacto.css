@@ -13,3 +13,112 @@
 .contact-social a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-top:1px solid #ffffff40;color:#fff;font-size:12px;transition:color .2s}
 .contact-social a:hover{color:#e3b51a}
 .contact-social a b{font:600 12px "Space Grotesk",sans-serif;text-align:right}
+
+/* Carga de archivos: instrucciones legibles y selector claramente identificable */
+.contact-form .file-drop{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  min-height:112px;
+  padding:18px;
+  border:1.5px dashed color-mix(in srgb,var(--blue) 62%,var(--border));
+  border-radius:9px;
+  background:var(--card);
+  transition:border-color .2s,background .2s,box-shadow .2s;
+}
+.contact-form .file-drop:focus-within{
+  border-color:var(--blue);
+  box-shadow:0 0 0 3px color-mix(in srgb,var(--blue) 13%,transparent);
+}
+.contact-form .file-drop>div{
+  display:grid;
+  grid-template-columns:42px minmax(0,1fr);
+  align-items:center;
+  column-gap:12px;
+  row-gap:3px;
+  flex:1 1 auto;
+}
+.contact-form .file-symbol{
+  grid-column:1;
+  grid-row:1 / span 2;
+  display:grid;
+  place-items:center;
+  width:42px;
+  height:42px;
+  border-radius:11px;
+  background:color-mix(in srgb,var(--blue) 11%,var(--card));
+  color:var(--blue);
+  font:600 25px/1 Inter,Arial,sans-serif;
+}
+.contact-form .file-drop strong{
+  grid-column:2;
+  color:var(--ink);
+  font:600 14px/1.35 "Space Grotesk",sans-serif;
+}
+.contact-form .file-drop span:not(.file-symbol){
+  grid-column:2;
+  color:var(--muted);
+  font:400 12px/1.5 Inter,Arial,sans-serif;
+}
+.contact-form .file-drop input[type="file"]{
+  flex:0 1 auto;
+  width:auto;
+  max-width:100%;
+  min-width:0;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  color:var(--muted);
+  font:500 12px Inter,Arial,sans-serif;
+}
+.contact-form .file-drop input[type="file"]::file-selector-button{
+  margin:0;
+  padding:11px 15px;
+  border:1px solid var(--blue);
+  border-radius:6px;
+  background:var(--blue);
+  color:#fff;
+  font:600 12px Inter,Arial,sans-serif;
+  cursor:pointer;
+  transition:background .2s,border-color .2s,transform .2s;
+}
+.contact-form .file-drop input[type="file"]::file-selector-button:hover{
+  border-color:#0f55bd;
+  background:#0f55bd;
+}
+.contact-form .file-drop input[type="file"]:focus-visible{
+  outline:3px solid var(--yellow);
+  outline-offset:4px;
+}
+.contact-form .contact-file-list{
+  gap:7px;
+  margin-top:8px;
+  color:var(--ink);
+  font-size:12px;
+}
+.contact-form .contact-file-item{
+  align-items:center;
+  padding:9px 11px;
+  border:1px solid var(--border);
+  border-radius:6px;
+  background:var(--section);
+  color:var(--ink);
+  font-size:12px;
+  line-height:1.45;
+}
+@media(max-width:620px){
+  .contact-form .file-drop{
+    align-items:stretch;
+    flex-direction:column;
+    gap:14px;
+    padding:16px;
+  }
+  .contact-form .file-drop input[type="file"]{
+    width:100%;
+  }
+  .contact-form .file-drop input[type="file"]::file-selector-button{
+    margin-right:9px;
+  }
+}
