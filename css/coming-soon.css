@@ -5,3 +5,29 @@
 /* Titulares de LAB y Tienda alineados con el sistema tipográfico editorial */
 .coming-hero h1{font-family:"Space Grotesk",sans-serif;font-weight:700;letter-spacing:-.075em;line-height:.98}
 .coming-hero h1 span{font-family:inherit;font-weight:700}
+
+
+/* LAB — bitácora universitaria y proyecto destacado */
+.lab-semesters{padding-top:58px}
+.lab-project-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);overflow:hidden;border:1px solid var(--border);border-radius:var(--radius);background:var(--card)}
+.lab-project-visual{position:relative;min-height:390px;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 50% 48%,#284f9b 0,#15294b 43%,#10131a 78%)}
+.lab-orbit{position:absolute;width:72%;aspect-ratio:1;border:1px solid #ffffff40;border-radius:50%;transform:rotate(-25deg) scaleY(.45)}
+.lab-orbit-one{width:88%;transform:rotate(28deg) scaleY(.42);border-color:#e8bb3b88}
+.lab-orbit-two{width:64%;transform:rotate(-35deg) scaleY(.55)}
+.lab-planet{position:relative;z-index:1;width:170px;height:170px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(circle at 32% 25%,#fff4c4,#e4b94b 22%,#9a6a2c 65%,#302b35 100%);box-shadow:0 0 65px #6e9bff55;color:#14213a;font:700 38px/1 "Space Grotesk",sans-serif;letter-spacing:-.08em}
+.lab-planet span{font-size:17px;letter-spacing:.2em}
+.lab-project-stamp,.lab-project-coordinates{position:absolute;color:#ffffffa8;font:500 9px "Space Grotesk",sans-serif;letter-spacing:.13em}
+.lab-project-stamp{top:22px;left:22px}.lab-project-coordinates{bottom:20px;right:22px}
+.lab-project-copy{padding:clamp(25px,4vw,48px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.lab-project-meta{display:flex;flex-wrap:wrap;gap:10px 18px;color:var(--muted);font:600 9px "Space Grotesk",sans-serif;letter-spacing:.12em}
+.lab-project-copy h3{font:700 clamp(42px,6vw,70px)/.95 "Space Grotesk",sans-serif;letter-spacing:-.08em;margin:18px 0 12px}
+.lab-project-lead{font:500 clamp(18px,2vw,22px)/1.35 "Space Grotesk",sans-serif;max-width:470px}
+.lab-project-copy>p:not(.lab-project-lead){color:var(--muted);font-size:13px;line-height:1.75}
+.lab-tags{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 25px}
+.lab-tags span{padding:7px 9px;border:1px solid var(--border);border-radius:4px;color:var(--muted);font:500 9px "Space Grotesk",sans-serif}
+.lab-next-semesters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin-top:16px}
+.lab-next-semesters article{padding:22px;border:1px solid var(--border);border-radius:var(--radius);background:var(--card)}
+.lab-next-semesters article>span{font:600 9px "Space Grotesk",sans-serif;letter-spacing:.12em;color:var(--muted)}
+.lab-next-semesters h3{font:600 23px "Space Grotesk",sans-serif;letter-spacing:-.04em;margin:14px 0 7px}
+.lab-next-semesters p{color:var(--muted);font-size:12px;line-height:1.65;margin:0}
+@media(max-width:760px){.lab-project-card{grid-template-columns:1fr}.lab-project-visual{min-height:290px}.lab-project-copy{padding:25px}.lab-next-semesters{grid-template-columns:1fr}}
