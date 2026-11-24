@@ -34,3 +34,13 @@
 .eggspace-credit-list span{padding:11px 15px;border:1px solid var(--border);border-radius:999px;background:var(--card);font:500 12px "Space Grotesk",sans-serif}
 .lab-project-credits{margin:18px 0;color:var(--muted);font-size:12px;line-height:1.6}
 .lab-project-credits strong{color:var(--text)}
+
+/* Edición y narrativa — portada tipográfica temporal, sin fotografía */
+.editing-narrative-art{display:flex;flex-direction:column;justify-content:space-between;padding:clamp(22px,4vw,42px);box-sizing:border-box;background:linear-gradient(135deg,#101827 0%,#172d50 58%,#244f85 100%);isolation:isolate}
+.editing-narrative-art:before{content:"";position:absolute;z-index:-1;width:76%;aspect-ratio:1;border:1px solid #ffffff30;border-radius:50%;right:-18%;top:8%;box-shadow:0 0 0 34px #ffffff08,0 0 0 68px #ffffff06}
+.editing-narrative-art:after{inset:55% 0 0;background:linear-gradient(transparent,#080d18aa)}
+.editing-narrative-art .editing-art-index,.editing-narrative-art .editing-art-caption,.editing-narrative-art .editing-art-mark{position:relative;inset:auto;left:auto;bottom:auto;color:#ffffffb8;font:500 9px "Space Grotesk",sans-serif;letter-spacing:.15em}
+.editing-narrative-art .editing-art-title{position:relative;z-index:2;left:auto;bottom:auto;color:#f5f3ea;font:700 clamp(43px,6.5vw,76px)/.88 "Space Grotesk",sans-serif;letter-spacing:-.09em}
+.editing-narrative-art .editing-art-title em{color:#a9c9ff;font-style:normal}
+.editing-narrative-art .editing-art-caption{color:#ffffffd9}
+.editing-narrative-art .editing-art-mark{position:absolute;right:22px;top:22px;left:auto;bottom:auto}
