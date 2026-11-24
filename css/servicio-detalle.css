@@ -47,3 +47,9 @@
 
 /* Servicios de edición: contenido breve para equilibrar el encabezado y los videos */
 .editing-services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding:8px 0 58px}.editing-services article{padding:20px 20px 18px;border:1px solid var(--border);border-radius:var(--radius);background:var(--card)}.editing-services article>span{font:600 9px "Space Grotesk",sans-serif;letter-spacing:.12em;color:var(--blue)}.editing-services h2{font:600 19px/1.15 "Space Grotesk",sans-serif;letter-spacing:-.04em;margin:16px 0 7px}.editing-services p{font-size:12px;line-height:1.6;color:var(--muted);margin:0}.eggspace-art img{object-fit:cover;object-position:50% 50%}.eggspace-art{overflow:hidden}@media(max-width:760px){.editing-services{grid-template-columns:1fr;gap:10px;padding-bottom:40px}.editing-services article{padding:16px}}
+
+
+/* EggSpace: mostrar la imagen vertical completa y centrar el logotipo */
+.eggspace-art--logo{background:#0b2d6b;display:grid;place-items:center}
+.eggspace-art--logo img{width:100%;height:100%;object-fit:contain;object-position:50% 50%;display:block}
+.eggspace-art--logo:after{display:none}
