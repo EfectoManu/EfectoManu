@@ -87,35 +87,3 @@
 .production-card-copy .production-cta{align-self:stretch;width:100%;margin-top:auto;min-height:44px;padding:11px 12px;font-size:12px;gap:8px;}
 @media(max-width:900px){.production-pair{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:620px){.production-pair{grid-template-columns:1fr;gap:18px;}.production-card-copy{padding:19px;}.production-card-copy h2{font-size:27px;}}
-
-
-/* Archivo de producciones: una pieza protagonista y una retícula equilibrada */
-.productions-page{padding-bottom:20px}
-.productions-page .productions-intro{position:relative;align-items:flex-end;padding:clamp(52px,7vw,82px) 0 36px;margin-bottom:28px;border-bottom:1px solid var(--border)}
-.productions-intro h1{font-size:clamp(48px,7.2vw,90px);line-height:.96;letter-spacing:-.085em}
-.productions-intro .intro-copy{max-width:520px;margin-top:18px;font-size:15px}
-.intro-aside{align-self:flex-end;min-width:190px;padding:12px 0 8px 18px;border-left:2px solid var(--yellow);font-size:9px;line-height:1.8}
-.production-pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;padding-bottom:52px}
-.production-card{border-radius:16px;transition:transform .25s,border-color .25s,box-shadow .25s}
-.production-card:hover{transform:translateY(-4px);border-color:var(--blue);box-shadow:0 14px 35px #0000000d}
-.production-card:first-child{grid-column:1/-1;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);min-height:330px}
-.production-card:first-child .production-card-image{height:100%;min-height:330px;aspect-ratio:auto}
-.production-card:first-child .production-card-copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(24px,4vw,48px)}
-.production-card:first-child .production-card-copy h2{font-size:clamp(30px,4vw,46px);max-width:420px}
-.production-card:first-child .production-card-copy p{max-width:390px}
-.production-card-image img{transition:transform .65s cubic-bezier(.2,.7,.2,1)}
-.production-card:hover .production-card-image img{transform:scale(1.045)}
-.production-card-copy{padding:22px 23px 25px}
-.production-card-copy h2{margin-top:12px}
-.production-cta{margin-top:auto;align-self:flex-start}
-.productions-note{margin-top:4px;padding:26px 0 68px}
-@media(max-width:760px){
- .productions-page .productions-intro{display:block;padding:48px 0 28px;margin-bottom:20px}
- .intro-aside{margin-top:22px}
- .production-pair{grid-template-columns:1fr;gap:18px;padding-bottom:40px}
- .production-card:first-child{grid-column:auto;display:grid;grid-template-columns:1fr;min-height:0}
- .production-card:first-child .production-card-image{min-height:0;aspect-ratio:16/10}
- .production-card:first-child .production-card-copy{padding:20px}
- .production-card:first-child .production-card-copy h2{font-size:30px}
- .productions-note{align-items:flex-start;flex-direction:column;gap:12px}
-}
